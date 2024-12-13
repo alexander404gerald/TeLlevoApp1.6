@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Te Llevo</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="ion-padding">
+  <form>
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input type="text" placeholder="Ingrese su nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Apellidos</ion-label>
+      <ion-input type="text" placeholder="Ingrese sus apellidos"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Rut</ion-label>
+      <ion-input type="text" placeholder="Ingrese su RUT"></ion-input>
+    </ion-item>  
+
+    <ion-item>
+    <label for="correo">Correo institucional</label>
+    <ion-input type="email" placeholder="correo@duocuc.cl"></ion-input>
+    </ion-item>
+
+    <!-- Selección de Sede -->
+  <ion-item>
+    <ion-label>Seleccione una Sede</ion-label>
+    <ion-select placeholder="Seleccione una Sede">
+      <ion-select-option value="puente-alto">Puente Alto</ion-select-option>
+      <ion-select-option value="san-joaquin">San Joaquín</ion-select-option>
+      <ion-select-option value="apoquindo">Apoquindo</ion-select-option>
+      <ion-select-option value="pirque">Pirque</ion-select-option>
+      <ion-select-option value="san-bernardo">San Bernardo</ion-select-option>
+      <ion-select-option value="republica">República</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- Selección de Cargo -->
+  <ion-item>
+    <ion-label>Seleccione su cargo</ion-label>
+    <ion-select placeholder="Seleccione un cargo">
+      <ion-select-option value="profesor">Profesor</ion-select-option>
+      <ion-select-option value="alumno">Alumno</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+    <ion-item>
+      <label >Tienes licencia? </label>
+      <input type="file" id="licencia" class="input-field" slot="end">
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Vehículo</ion-label>
+      <ion-input type="text" placeholder="Ingrese su vehículo"></ion-input>
+    </ion-item>
+
+    <div class="image-container">
+      <div>
+        <ion-label>Imagen del vehículo</ion-label>
+        <ion-icon name="image-outline" size="large"></ion-icon>
+      </div>
+      <div>
+        <ion-label>Imagen del conductor</ion-label>
+        <ion-icon name="image-outline" size="large"></ion-icon>
+      </div>
+    </div>
+
+    <ion-button expand="block" color="warning" type="submit" (click)="siguiente()">
+      Siguiente
+    </ion-button>
+    <ion-button expand="block" color="warning" type="submit" (click)="login()">
+      Volver al login
+    </ion-button>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="car-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

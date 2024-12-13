@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Menu Conductor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding" style="background-color: #6fbf73;">
+
+  <form (ngSubmit)="guardarViaje()" #viajeForm="ngForm">
+    <ion-item>
+      <ion-label>Destino</ion-label>
+      <input class="wena" type="text" [(ngModel)]="viaje.destino" name="destino" id="autocomplete" required>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Capacidad</ion-label>
+      <ion-select [(ngModel)]="viaje.capacidad" name="capacidad" placeholder="Seleccionar Capacidad" required>
+        <ion-select-option *ngFor="let capacidad of [1, 2, 3, 4]" [value]="capacidad">{{ capacidad }}</ion-select-option>
+      </ion-select>    </ion-item>
+    
+    <ion-item>
+      <ion-label>Costo por Pasajero</ion-label>
+      <ion-select [(ngModel)]="viaje.costoPasajero" name="costoPasajero" placeholder="Seleccionar Costo" required>
+        <ion-select-option *ngFor="let costo of costos" [value]="costo">{{ costo }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Hora de Salida</ion-label>
+      <ion-input type="time" [(ngModel)]="viaje.horaSalida" name="horaSalida" required></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Programación</ion-label>
+      <ion-input type="date" [(ngModel)]="viaje.programacion" name="programacion" required></ion-input>
+    </ion-item>
+  
+    <ion-button expand="full" type="submit">Guardar Viaje</ion-button>
+  </form>
+
+  <ion-button expand="full" (click)="mostrarViajes()">Mostrar Viajes</ion-button>
+  <div class="table-container">
+    <table class="viajes-table" *ngIf="viajes.length > 0">
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Capacidad</th>
+          <th>Costo</th>
+          <th>Hora</th>
+          <th>Programación</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let v of viajes; let i = index">
+          <td>{{ v.destino }}</td>
+          <td>{{ v.capacidad }}</td>
+          <td>{{ v.costoPasajero }}</td>
+          <td>{{ v.horaSalida }}</td>
+          <td>{{ v.programacion }}</td>
+          <td>
+            <button class="btn-eliminar" (click)="eliminarViaje(i)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+
+
+
+  <div>
+    <ion-button expand="block" (click)="calculaRuta()">Indicaciones del trayecto</ion-button> 
+
+  </div>
+  <br>
+
+
+  <div class="map-container">
+    <div id="map" ></div>  
+  </div >    
+      <div id="trayecto"></div>
+  
+
+</ion-content>
+
+
+
+
+
+

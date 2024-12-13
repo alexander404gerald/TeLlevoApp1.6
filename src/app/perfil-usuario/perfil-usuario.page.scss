@@ -1,0 +1,17 @@
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+
+  }
+  
+  .image-container div {
+    text-align: center;
+  }
+
+
+.ion-padding{
+  border: 5px solid black;
+  margin: auto;
+  padding: 10px 10px 10px 10px;
+}

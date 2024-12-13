@@ -1,0 +1,111 @@
+.map-container {
+    width: 90%; 
+    height: 400px; 
+    padding: 10px; 
+    border: 5px solid #000; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    margin: auto;
+}
+  
+  #map {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  ion-grid {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 16px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  ion-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  ion-row:nth-child(even) {
+    background-color: #f9f9f9; /* Color alterno para filas pares */
+  }
+  
+  ion-row:nth-child(odd) {
+    background-color: #fff; /* Color para filas impares */
+  }
+  
+  ion-col {
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+  }
+  
+  ion-row:first-child ion-col {
+    background-color: #6fbf73; /* Encabezado de la tabla */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #5a9f60;
+  }
+  
+  ion-button {
+    font-size: 12px;
+    padding: 4px 8px;
+    margin: 2px;
+    border-radius: 4px;
+  }
+
+  //nuevo
+  .table-container {
+    overflow-x: auto; /* Habilita scroll horizontal si es necesario */
+    margin-top: 10px;
+    white-space: nowrap; /* Previene que las columnas se rompan */
+  }
+  
+  .viajes-table {
+    width: 100%;
+    border-collapse: collapse; /* Evita espacios entre celdas */
+    font-family: Arial, sans-serif;
+    min-width: 600px; /* Asegura un ancho mínimo para pantallas pequeñas */
+    border: 1px solid #ccc; /* Bordes alrededor de la tabla */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  .viajes-table th,
+  .viajes-table td {
+    border: 1px solid #ccc; /* Bordes entre celdas */
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Espaciado interno */
+  }
+  
+  .viajes-table th {
+    background-color: #f0f0f0; /* Fondo gris claro para encabezados */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  .viajes-table tbody tr:nth-child(even) {
+    background-color: #fafafa; /* Fondo alternado para filas pares */
+  }
+  
+  .viajes-table tbody tr:hover {
+    background-color: #f5f5f5; /* Efecto hover para filas */
+  }
+  
+  .btn-reservar {
+    background-color: #4caf50; /* Color verde para el botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
+  .btn-reservar:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+  }
+  
+  

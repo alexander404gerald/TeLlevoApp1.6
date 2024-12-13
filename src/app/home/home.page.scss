@@ -1,0 +1,168 @@
+ion-content {
+    background-color: #6fbf73; 
+  }
+
+  /* Título */
+h2 {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 8px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background-color: #f9f9f9; /* Fondo claro */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  ion-item {
+    --background: #ffffff; /* Fondo blanco */
+    border: 1px solid #e0e0e0; /* Borde gris claro */
+    border-radius: 6px;
+  }
+  ion-label {
+    font-weight: bold;
+    color: #4a4a4a; /* Texto gris oscuro */
+  }
+
+  ion-input {
+    --padding-start: 8px;
+    --padding-end: 8px;
+  }
+  
+  ion-button {
+    margin-top: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+  
+  ion-button[type="submit"] {
+    background-color: #4caf50; /* Verde para el botón de guardar */
+    color: #ffffff;
+  }
+  
+  ion-button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  ion-button + ion-button {
+    margin-top: 8px;
+  }
+  
+  @media (min-width: 768px) {
+    form {
+      max-width: 500px;
+      margin: 0 auto; /* Centrado horizontal */
+    }
+  }
+  
+  /* Barra de búsqueda */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    background: white;
+    padding: 4px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  
+  .search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 4px;
+  }
+  
+  .search-icon {
+    font-size: 20px;
+    color: black;
+    margin-left: 8px;
+  }
+  
+  /* Último viaje */
+  .last-trip-text {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 4px;
+  }
+  
+  .last-trip-link {
+    color: blue;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  
+
+  .map-container {
+    width: 90%; 
+    height: 400px; 
+    padding: 10px; 
+    border: 5px solid #000; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    margin: auto;
+}
+  
+  #map {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  ion-button {
+    --ion-color-primary: #F8B21C !important;
+    color: #000;
+    border: 1px solid black;
+    font-weight: bold;
+    border-radius: 10px solid black;
+  }
+
+  //nuevo
+  .table-container {
+    overflow-x: auto; /* Habilita scroll horizontal */
+    margin-top: 10px;
+  }
+  
+  .viajes-table {
+    width: 100%; /* La tabla ocupa todo el ancho posible */
+    border-collapse: collapse; /* Quita los espacios entre bordes */
+    font-family: Arial, sans-serif;
+    min-width: 600px; /* Asegura que la tabla tenga un ancho mínimo */
+  }
+  
+  .viajes-table th,
+  .viajes-table td {
+    border: 1px solid #ccc; /* Bordes entre celdas */
+    text-align: center; /* Centrar el contenido */
+    padding: 10px; /* Espaciado interno */
+  }
+  
+  .viajes-table th {
+    background-color: #f0f0f0; /* Fondo claro para los encabezados */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  .viajes-table tbody tr:nth-child(even) {
+    background-color: #fafafa; /* Fondo alternado para las filas */
+  }
+  
+  .viajes-table tbody tr:hover {
+    background-color: #f5f5f5; /* Efecto hover para filas */
+  }
+  
+  .btn-eliminar {
+    background-color: #e53935; /* Color rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
+  .btn-eliminar:hover {
+    background-color: #d32f2f; /* Cambia el color al pasar el mouse */
+  }

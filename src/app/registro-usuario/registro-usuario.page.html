@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="register-container">
+    <!-- Contenedor del logo -->
+    <div class="logo-container">
+      <img src="/assets/icon/logoduoc.png" alt="Logo">
+    </div>
+
+    <!-- Campos del formulario -->
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input [(ngModel)]="email" type="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="password" type="password" required></ion-input>
+    </ion-item>
+
+    <!-- Botones -->
+    <ion-button class="but" expand="block"  (click)="register()">
+      Registrarse
+    </ion-button>
+
+    <ion-button expand="block" fill="outline"  (click)="enviarLogin()">
+      Volver al Login
+    </ion-button>
+  </div>
+
+  <!-- Botón para mostrar u ocultar los usuarios registrados -->
+  <div class="user-list-container">
+    <ion-button expand="block" fill="outline" color="secondary" (click)="toggleUserList()">
+      {{ showUsers ? 'Ocultar Usuarios' : 'Mostrar Usuarios' }}
+    </ion-button>
+    <ion-list *ngIf="showUsers">
+      <ion-item *ngFor="let user of users; let i = index">
+        <ion-label>{{ user.email }}</ion-label>
+        <div>
+          <strong>Contraseña:</strong> {{ user.password }}
+          <ion-button fill="clear" color="danger" (click)="deleteUser(i)">
+            Eliminar
+          </ion-button>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

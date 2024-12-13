@@ -1,0 +1,23 @@
+
+<ion-content [fullscreen]="true">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" color="secondary">
+  
+      <ion-tab-button tab="home" (click)="irconductor()"  routerLinkActive="selected">
+        <ion-icon name="car"></ion-icon>
+        <ion-label><h3>Menu conductor</h3></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="home" (click)="irpasajero()"  routerLinkActive="selected">
+        <ion-icon name=""></ion-icon>
+        <ion-label><h3>Menu Pasajero</h3></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="login" (click)="irlogin()"  routerLinkActive="selected">
+        <ion-icon name="logout"></ion-icon>
+        <ion-label><h3>Cerrar Sesion</h3></ion-label>
+      </ion-tab-button>
+  
+    </ion-tab-bar>
+   </ion-tabs>
+</ion-content>
